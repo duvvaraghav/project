@@ -39,9 +39,6 @@
                 <url>http://3.89.144.102:8080/manager/text</url>
                 <server>myserver</server>
                 <path>/site</path>
-                <url>http://3.89.144.102:8080/manager/html</url>
-                <server>myserver</server>
-                <path>/site</path>
           </configuration>
         </plugin>
         <plugin>
