@@ -25,7 +25,7 @@ pipeline {
             steps {
                 echo 'deploying..'
                 sh '''
-                   sudo mvn deploy
+                   sudo mvn tomcat9:deploy
                 '''
             }
         } 
