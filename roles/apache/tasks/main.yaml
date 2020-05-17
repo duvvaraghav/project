@@ -1,0 +1,21 @@
+- name: Installing tomcat9
+  apt:
+    name: tomcat9
+    state: present
+- file:
+    path: /etc/tomcat9/tomcat-users.xml
+    state: absent
+- name: deploy_code
+  copy:
+      src: /etc/ansible/roles/apache/files/tomcat-users.xml
+      dest: /etc/tomcat9/
+- name: Installing package
+  apt:
+    name: tomcat9-examples
+    state: present
+- name: Installing package
+  apt:
+    name: tomcat9-admin
+    state: present	  
+  notify:
+  - restart_tomcat9
